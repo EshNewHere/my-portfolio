@@ -97,7 +97,7 @@ const App = () => {
     title: "個人遊戲精華：節奏蒙太奇",
     subtitle: "Gameplay Montage",
     tools: ["Premiere Pro", "After Effects", "Photoshop"],
-    description: "透過音樂視覺化技術，精準捕捉遊戲擊殺高光時刻，並與背景音樂重拍完美契合，營造極具張力的視覺沉浸感。",
+    description: "透過音樂視覺化技術，精準捕捉遊戲擊殺高光時刻，並與背景音樂重拍完美契合，營造極具張力的視覺沉沉感。",
     features: [
       "音樂視覺化：畫面與音效重擊完美同步",
       "進階轉場：流暢的動態感與打擊感",
@@ -150,12 +150,17 @@ const App = () => {
             「將創意技術化，用精準剪輯與視覺特效說好每一個故事。」
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="#projects" className="w-full sm:w-auto px-8 py-4 bg-white text-slate-950 rounded-xl font-bold flex items-center justify-center hover:bg-indigo-50 transition-all group text-center">
+            <a href="#projects" className="w-full sm:w-auto px-8 py-4 bg-white text-slate-950 rounded-xl font-bold flex items-center justify-center hover:bg-indigo-50 transition-all group text-center text-sm sm:text-base">
               查看作品集 <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
-            <button className="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-slate-800 text-white rounded-xl font-bold flex items-center justify-center hover:bg-slate-800 transition-all">
+            {/* 修正後的下載連結：使用 <a> 標籤確保下載功能正常 */}
+            <a 
+              href="/resume.pdf" 
+              download 
+              className="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-slate-800 text-white rounded-xl font-bold flex items-center justify-center hover:bg-slate-800 transition-all text-sm sm:text-base cursor-pointer"
+            >
               <Download className="mr-2" size={20} /> 下載完整 PDF 履歷
-            </button>
+            </a>
           </div>
           
           <div className="mt-16 flex flex-wrap justify-center gap-6 text-slate-400">
@@ -295,11 +300,11 @@ const App = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div>
-              <h2 className="text-4xl font-bold mb-6 italic">Let's Create Together.</h2>
-              <p className="text-slate-400 text-lg max-w-md mb-8">
+              <h2 className="text-4xl font-bold mb-6 italic text-center md:text-left mx-auto md:mx-0">Let's Create Together.</h2>
+              <p className="text-slate-400 text-lg max-w-md mb-8 text-center md:text-left mx-auto md:mx-0">
                 無論是高節奏的遊戲精華、專業的商業廣告，或是複雜的視覺特效需求，我都能提供高品質的影音解決方案。
               </p>
-              <div className="space-y-4">
+              <div className="space-y-4 flex flex-col items-center md:items-start">
                 <a href="mailto:eshbecomeuwu@gmail.com" className="flex items-center space-x-4 text-slate-300 hover:text-indigo-400 transition-colors group">
                   <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center group-hover:bg-indigo-600/20 transition-colors">
                     <Mail size={20} />
